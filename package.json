@@ -5,7 +5,13 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "shopify": "shopify",
+    "shopify-build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy"
   },
   "private": true,
   "dependencies": {
@@ -21,9 +27,11 @@
     "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.4.0",
     "@nestjs/platform-express": "^9.4.0",
+    "@shopify/app": "^3.55.3",
     "@shopify/app-bridge": "^3.7.5",
     "@shopify/app-bridge-react": "^3.7.5",
     "@shopify/app-bridge-utils": "^3.5.1",
+    "@shopify/cli": "^3.55.3",
     "@shopify/polaris": "^10.41.0",
     "@shopify/shopify-api": "^7.6.0",
     "core-js": "^3.30.0",
@@ -98,5 +106,8 @@
     "configPaths": [
       "./db/mikro-orm.config.ts"
     ]
-  }
+  },
+  "workspaces": [
+    "extensions/*"
+  ]
 }
